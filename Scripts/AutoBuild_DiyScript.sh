@@ -146,7 +146,7 @@ EOF
 				# sed -i "s?/bin/login?/usr/libexec/login.sh?g" ${FEEDS_PKG}/ttyd/files/ttyd.config
 				AddPackage qosmate hudra0 qosmate main
 				AddPackage qosmate hudra0 luci-app-qosmate main
-				# AddPackage passwall xiaorouji openwrt-passwall main
+				AddPackage passwall xiaorouji openwrt-passwall main
 			    AddPackage passwall xiaorouji openwrt-passwall-packages main
 				AddPackage passwall xiaorouji openwrt-passwall2 main
 				# 根据https://github.com/xiaorouji/openwrt-passwall2/issues/722#issuecomment-2560962548
