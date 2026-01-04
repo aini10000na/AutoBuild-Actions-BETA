@@ -148,12 +148,7 @@ EOF
 				AddPackage qosmate hudra0 luci-app-qosmate main
 				AddPackage passwall xiaorouji openwrt-passwall main
 			    AddPackage passwall xiaorouji openwrt-passwall-packages main
-				AddPackage passwall xiaorouji openwrt-passwall2 main
-				# 根据https://github.com/xiaorouji/openwrt-passwall2/issues/722#issuecomment-2560962548
-				# 添加此命令解决passwall冲突
-				rm -rf ${WORK}/feeds/packages/net/{chinadns*,hysteria,geoview,trojan*,xray*,v2ray*,sing*}
-    			rm -rf ${FEEDS_PKG}/net/{chinadns*,hysteria,geoview,trojan*,xray*,v2ray*,sing*}
-				rm -rf ${WORK}/feeds/luci/applications/luci-app-passwall/
+				# AddPackage passwall xiaorouji openwrt-passwall2 main
 				rm -r ${FEEDS_LUCI}/luci-app-passwall
 				#AddPackage other WROIATE luci-app-socat main
     			#rm -r ${FEEDS_LUCI}/luci-app-socat
