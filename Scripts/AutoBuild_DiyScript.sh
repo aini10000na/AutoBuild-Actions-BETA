@@ -143,11 +143,9 @@ EOF
 			sed -i -- 's:/bin/ash:'/bin/bash':g' ${BASE_FILES}/etc/passwd
 			case "${CONFIG_FILE}" in
 			x86_64)
+				AddPackage other sbwml luci-app-mosdns v5
 				AddPackage qosmate hudra0 qosmate main
 				AddPackage qosmate hudra0 luci-app-qosmate main
-				
-				AddPackage bandix timsaya luci-app-bandix main
-				AddPackage bandix timsaya openwrt-bandix main
 
 				AddPackage fakehttp yingziwu luci-app-fakehttp main
 				AddPackage fakehttp yingziwu openwrt-fakehttp main
