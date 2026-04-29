@@ -143,7 +143,6 @@ EOF
 			sed -i -- 's:/bin/ash:'/bin/bash':g' ${BASE_FILES}/etc/passwd
 			case "${CONFIG_FILE}" in
 			x86_64)
-				AddPackage other sbwml luci-app-mosdns v5
 				AddPackage qosmate hudra0 qosmate main
 				AddPackage qosmate hudra0 luci-app-qosmate main
 				
@@ -157,6 +156,8 @@ EOF
 			    AddPackage passwall Openwrt-Passwall openwrt-passwall-packages main
 				
 				git clone https://github.com/QiuSimons/luci-app-daed package/dae
+				rm -rf ${FEEDS_PKG}/daed
+				rm -r ${FEEDS_LUCI}/luci-app-daed
 				
 				sed -i 's/^local excluded_domain = {.*/local excluded_domain = {}/' package/passwall/openwrt-passwall/luci-app-passwall/root/usr/share/passwall/rule_update.lua
 				
