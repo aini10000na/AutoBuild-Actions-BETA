@@ -102,7 +102,7 @@ EOF
 		rm -r ${FEEDS_LUCI}/luci-theme-argon*
 		AddPackage other vernesong OpenClash dev
 		AddPackage other jerrykuku luci-app-argon-config master
-		AddPackage other sbwml luci-app-mosdns v5.3.4-r5
+		AddPackage other sbwml luci-app-mosdns v5
 		AddPackage themes jerrykuku luci-theme-argon 18.06
 		AddPackage themes thinktip luci-theme-neobird main
 		AddPackage msd_lite ximiTech luci-app-msd_lite main
@@ -143,7 +143,7 @@ EOF
 			sed -i -- 's:/bin/ash:'/bin/bash':g' ${BASE_FILES}/etc/passwd
 			case "${CONFIG_FILE}" in
 			x86_64)
-				AddPackage other sbwml luci-app-mosdns v5.3.4-r5
+				AddPackage other sbwml luci-app-mosdns v5
 				AddPackage qosmate hudra0 qosmate main
 				AddPackage qosmate hudra0 luci-app-qosmate main
 				
@@ -212,7 +212,7 @@ EOF
 			rm -rf feeds/packages/lang/golang
 			git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 				
-			AddPackage other sbwml luci-app-mosdns v5.3.4-r5
+			AddPackage other sbwml luci-app-mosdns v5
 		;;
 		esac
 	;;
