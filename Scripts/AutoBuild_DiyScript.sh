@@ -157,7 +157,7 @@ EOF
 				AddPackage fakehttp yingziwu luci-app-fakehttp main
 				AddPackage fakehttp yingziwu openwrt-fakehttp main
 				
-				AddPackage passwall Openwrt-Passwall openwrt-passwall 26.9.9-1
+				AddPackage passwall Openwrt-Passwall openwrt-passwall main
 			    AddPackage passwall Openwrt-Passwall openwrt-passwall-packages main
 				
 				git clone https://github.com/immortalwrt/packages /tmp/packages
