@@ -102,7 +102,7 @@ EOF
 		rm -r ${FEEDS_LUCI}/luci-theme-argon*
 		AddPackage other vernesong OpenClash dev
 		AddPackage other jerrykuku luci-app-argon-config master
-		AddPackage other sbwml luci-app-mosdns v5
+		AddPackage other sbwml luci-app-mosdns v5-lua
 		AddPackage themes jerrykuku luci-theme-argon 18.06
 		AddPackage themes thinktip luci-theme-neobird main
 		AddPackage msd_lite ximiTech luci-app-msd_lite main
@@ -143,11 +143,6 @@ EOF
 			sed -i -- 's:/bin/ash:'/bin/bash':g' ${BASE_FILES}/etc/passwd
 			case "${CONFIG_FILE}" in
 			x86_64)
-				find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
-				find ./ | grep Makefile | grep mosdns | xargs rm -f
-				git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-				git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
-				
 				AddPackage qosmate hudra0 qosmate main
 				AddPackage qosmate hudra0 luci-app-qosmate main
 				
