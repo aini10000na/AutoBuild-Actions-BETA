@@ -547,11 +547,15 @@ ReleaseDL() {
 	fi
 	
 	rm -f ${API_FILE}
+	ECHO "Start to download API ${PKG_NAME} ..."
 	wget --quiet --no-check-certificate --tries 5 --timeout 20 $1 -O ${API_FILE}
 	if [[ $? != 0 || ! -f ${API_FILE} ]]
 	then
 		ECHO "Failed to download API ${PKG_NAME} ..."
+	else
+		ECHO "Downloaded API ${PKG_NAME} ..."
 	fi
+	
 	for i in $(seq 0 $(cat ${API_FILE} | jq ".assets | length" 2> /dev/null))
 	do
 		eval name=$(cat ${API_FILE} | jq ".assets[${i}].name" 2> /dev/null)
